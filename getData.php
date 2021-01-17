@@ -6,7 +6,7 @@ class getData {
         $ch = curl_init();
         curl_setopt_array($ch, [
             CURLOPT_RETURNTRANSFER => 1,
-            CURLOPT_URL => "https://slack.com/api/conversations.history?token=xoxp-20057120048-1182319415393-1528960139238-983ee68779ed05bb8bb69643c43cd5d7&channel=CAM91FNQ0&limit=2"
+            CURLOPT_URL => "https://slack.com/api/conversations.history?token=xoxp-XXXXXXXXXXX&channel=Channel_ID&limit=2"
         ]);
         $resp = curl_exec($ch);
         curl_close($ch);
@@ -22,7 +22,7 @@ class getData {
         $ch = curl_init();
         curl_setopt_array($ch, [
             CURLOPT_RETURNTRANSFER => 1,
-            CURLOPT_URL => "https://slack.com/api/users.list?token=xoxp-20057120048-1182319415393-1528960139238-983ee68779ed05bb8bb69643c43cd5d7"
+            CURLOPT_URL => "https://slack.com/api/users.list?token=xoxp-XXXXXXXXXXX"
         ]);
         $resp = curl_exec($ch);
         curl_close($ch);
