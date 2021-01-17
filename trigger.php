@@ -1,11 +1,11 @@
 <?php
 //header('Content-Type: text/html; charset=UTF-8');
-require_once '/var/www/kaizenToAsana/vendor/autoload.php';
-require_once '/var/www/kaizenToAsana/php-asana/vendor/autoload.php';
-require_once '/var/www/kaizenToAsana/getData.php';
-require_once '/var/www/kaizenToAsana/editData.php';
-require_once '/var/www/kaizenToAsana/sendToAsana.php';
-require_once '/var/www/kaizenToAsana/sendToSheets.php';
+require_once './vendor/autoload.php';
+require_once './php-asana/vendor/autoload.php';
+require_once './getData.php';
+require_once './editData.php';
+require_once './sendToAsana.php';
+require_once './sendToSheets.php';
 
 /*Slack側のエンドポイントチェック用
 echo file_get_contents('php://input'); */
@@ -15,7 +15,7 @@ $data = $getKaizen -> get_Slack_history();
 $users_list = $getKaizen -> get_Slack_users();
 
 $kaizen = $data[0];
-$ts_path = "/var/www/kaizenToAsana/timeStamp.txt";
+$ts_path = "./timeStamp.txt";
 $ts = file($ts_path);
 
 if($kaizen['username'] == "改善-事業パワーアップ"){
