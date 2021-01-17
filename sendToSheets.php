@@ -1,7 +1,7 @@
 <?php
 
 class sendToSheets{
-    public static $credentials_path = "/var/www/kaizenToAsana/credentials.json";
+    public static $credentials_path = "./credentials.json";
 
     public function send_to_sheets($data_array, $users_list){
         $client = new \Google_Client();
@@ -34,10 +34,8 @@ class sendToSheets{
 
         $send_data[0][6] = "事業";
 
-        //error_log(print_r($send_data, true));
-
         $service = new \Google_Service_Sheets($client);
-        $spreadsheet_id = "1aCrqVLDVUc2uY1ZlUZppBUnB_TcQazgpFFE7N3nkQ6w";
+        $spreadsheet_id = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         $sheetName = "シート1";
         $rowsInfo = $service->spreadsheets_values->get($spreadsheet_id, 'シート1!A3:I');
         $lastRow = count($rowsInfo)+3;
