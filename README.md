@@ -1,0 +1,2 @@
+# kaizenToAsanaAndSheets
+Slackの特定のチャンネルにワークフローを通じて投稿されたメッセージを、APIを用いて、タスク管理アプリであるAsanaや、Googleスプレッドシートに送信するアプリです。
